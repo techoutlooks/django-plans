@@ -41,7 +41,7 @@ You need to explicitly tell django-plans that user has fully activated account. 
 
 ``plans.signals.activate_user_plan(user)``
 
-You should send this signal providing ``user`` argument as an object of ``auth.User``. django-plans will use this information to initialize plan for this user, i.e. set account expiration date and will mark the default plan as active for this account.
+You should send this signal providing ``user`` argument as an object of ``settings.AUTH_USER_MODEL``. django-plans will use this information to initialize plan for this user, i.e. set account expiration date and will mark the default plan as active for this account.
 
 .. note::
 
